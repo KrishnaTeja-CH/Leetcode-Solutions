@@ -1,0 +1,13 @@
+str1 = input("Enter Any String: ")
+str2 = input('Enter Another String: ')
+
+Str1= str1.casefold()
+Str2 = str2.casefold()
+
+sorted_s1 = sorted(Str1)
+sorted_s2 = sorted(Str2)
+
+if sorted_s1 == sorted_s2:
+    print("Given",str1,"and ",str2,"are anagrams")
+else:
+    print("Given",str1,"and ",str2,"are not anagrams") 
