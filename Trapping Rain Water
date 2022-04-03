@@ -1,0 +1,17 @@
+class Solution:
+    def trap(self, height: List[int]) -> int:
+        max_left  = [0] * len(height)
+        max_right = [0] * len(height)
+        water_level,res = 0,0
+
+        for x in range(1,len(height)):
+            max_left[x] =  max(height[x-1], max_left[x-1])
+
+        for x in range(len(height)-2, -1, -1):
+            max_right[x] = max(height[x+1], max_right[x+1])
+
+        for x in range(len(height)):
+            water_level = min(max_left[x], max_right[x])
+            if water_level >= height[x]:
+                res += water_level- height[x]
+        return res
