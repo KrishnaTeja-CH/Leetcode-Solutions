@@ -1,0 +1,32 @@
+class Twitter:
+
+    def __init__(self):
+        self.relationship = collections.defaultdict(set)
+        self.tweets = collections.defaultdict(list)
+        self.counter = 0
+    def postTweet(self, userId: int, tweetId: int) -> None:
+        self.tweets[userId].append((self.counter, tweetId))
+        self.counter += 1
+    def getNewsFeed(self, userId: int) -> List[int]:
+        pq =[]
+        sources = list(self.relationship[userId]) + [userId]
+        for source in sources:
+            for count, tweetId in self.tweets[source]:
+                if len(pq) > 10:
+                    heapq.heappushpop(pq, (count, tweetId))
+                else:
+                    heapq.heappush(pq, (count, tweetId))
+        return [tweetId for count, tweetId in heapq.nlargest(10, pq)]
+    def follow(self, followerId: int, followeeId: int) -> None:
+        self.relationship[followerId].add(followeeId)
+
+    def unfollow(self, followerId: int, followeeId: int) -> None:
+        self.relationship[followerId].discard(followeeId)
+
+
+# Your Twitter object will be instantiated and called as such:
+# obj = Twitter()
+# obj.postTweet(userId,tweetId)
+# param_2 = obj.getNewsFeed(userId)
+# obj.follow(followerId,followeeId)
+# obj.unfollow(followerId,followeeId)
