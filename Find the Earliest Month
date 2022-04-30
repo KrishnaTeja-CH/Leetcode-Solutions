@@ -1,0 +1,40 @@
+def findEarliestMonth(stockPrice):
+    #initialize month variable with 0
+    month=0
+    change=max(stockPrice)
+    #Create a list to hold values
+    l=[]
+    while(len(stockPrice)>1):
+        l.append(stockPrice.pop(0))
+        #Now calculate the average
+        avg1=sum(l)//len(l)
+        avg2=sum(stockPrice)//len(stockPrice)
+
+        if(abs(avg1-avg2)<change):
+            change=abs(avg1-avg2)
+            month=len(l)
+    return month
+
+stockPrice=[1,3,2,3]
+print("Minimum change in the month :",findEarliestMonth(stockPrice))
+
+
+
+                                                    or
+                                                    
+                                                    
+def stockmax(prices):
+    i = 1 
+    l = []
+    while i< len(prices):
+        k = sum(prices[:i]) // len(prices[:i])
+        k1 = sum(prices[i:]) // len(prices[i:])
+        l.append(abs(k-k1))
+        i += 1
+    return l.index(min(l))+1                
+   
+                                                       
+                                                       
+                                                       
+                                              
+                                                    
