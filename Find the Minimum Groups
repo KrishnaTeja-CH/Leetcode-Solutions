@@ -1,0 +1,12 @@
+def minimumGroups(awards, k):
+  a = []
+  b = 0
+  awards.sort()
+  for i in range(len(awards)):
+    if awards[i] - awards[b] > k:
+      a.append(awards[b:i-1])
+      b = i
+  return len(a)+1
+awards =  [1, 5, 4, 6, 8, 9, 2]
+k = 3
+print(minimumGroups(awards, k))
