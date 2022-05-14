@@ -1,0 +1,4 @@
+def findMinHealth(power, armor):
+  x = sum(power)
+  a = min(max(power), armor)
+  return x-(a-1)
