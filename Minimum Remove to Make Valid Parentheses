@@ -1,0 +1,15 @@
+class Solution:
+    def minRemoveToMakeValid(self, s: str) -> str:
+        sol = []
+        lis = list(s)
+        for i in range(len(s)):
+            if lis[i] == "(":
+                sol.append(i)
+            elif lis[i] == ")":
+                if len(sol) != 0:
+                    sol.pop()
+                else:
+                    lis[i] = ""
+        for i in sol:
+            lis[i]=""
+        return "".join(lis)
