@@ -5,8 +5,7 @@ class Solution:
         x = len(nums)
         i = x//2
         if x%2 == 0:
-            j = (nums[i] + nums[i-1])/2
-            return j
+            return (nums[i] + nums[i-1])/2
         else:
             return nums[i]
             
