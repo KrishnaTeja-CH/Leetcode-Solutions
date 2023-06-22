@@ -8,4 +8,3 @@ class Solution:
             return (nums[i] + nums[i-1])/2
         else:
             return nums[i]
-            
