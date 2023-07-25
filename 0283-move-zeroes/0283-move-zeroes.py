@@ -9,5 +9,5 @@ class Solution:
             if nums[i] == 0:
                 nums.append(nums.pop(i))
                 j -= 1
-            else: i += 1
-        return nums
+            else:
+                i += 1
