@@ -3,11 +3,12 @@ class Solution:
         """
         Do not return anything, modify nums in-place instead.
         """
-        i = 0
+        i = 0 
         j = len(nums)-1
         while i<=j:
             if nums[i] == 0:
                 nums.append(nums.pop(i))
-                j -= 1
+                j -=1
             else:
                 i += 1
+            
