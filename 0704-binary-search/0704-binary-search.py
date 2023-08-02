@@ -5,6 +5,7 @@ class Solution:
           #  if nums[i] == target:
           #      return i
         #return -1
+        #Binary Search 
         low = 0
         high = len(nums) - 1
         while low <= high:
