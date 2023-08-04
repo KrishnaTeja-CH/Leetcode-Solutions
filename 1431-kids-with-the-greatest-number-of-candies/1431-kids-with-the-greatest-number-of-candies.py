@@ -3,8 +3,5 @@ class Solution:
         res = []
         high = max(candies)
         for i in range(len(candies)):
-            if ( candies[i] + extraCandies ) >= high :
-                res.append(True)
-            else:
-                res.append(False)
+            res.append(( candies[i] + extraCandies ) >= high)
         return res
