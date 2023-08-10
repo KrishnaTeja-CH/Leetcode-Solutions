@@ -1,16 +1,10 @@
 class Solution:
     def validPalindrome(self, s: str) -> bool:
-        i = 0
-        j = len(s)-1
+        i, j = 0, len(s)-1
         while i < j:
             if s[i] != s[j]:
-                left = s[i+1 : j+1]
-                right = s[i:j]
-                if left == left[::-1] or right == right[::-1]:
-                    return True
-                else:
-                    return False
-            else:
-                i += 1
-                j -= 1
+                return s[i+1 : j+1] == s[i+1 : j+1][::-1] or s[i:j] == s[i:j][::-1]  
+            i += 1 
+            j -= 1
+
         return True
