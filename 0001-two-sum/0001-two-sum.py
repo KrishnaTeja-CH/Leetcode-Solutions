@@ -1,8 +1,8 @@
 class Solution:
     def twoSum(self, nums: List[int], target: int) -> List[int]:
-        hashmap = {}
+        sol = {}
         for i in range(len(nums)):
-            diff = target - nums[i]
-            if diff in hashmap:
-                return [i, hashmap[diff]]
-            hashmap[nums[i]] = i
+            k = target - nums[i]
+            if k in sol:
+                return [i, sol[k]]
+            sol[nums[i]] = i
