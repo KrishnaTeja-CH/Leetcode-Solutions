@@ -7,10 +7,10 @@ class Solution:
         s = s.replace("XC", "LXXXX")
         s = s.replace("CD", "CCCC")
         s = s.replace("CM", "DCCCC")
-        sol = []
+        sol = 0
         for i in s:
-             sol.append(k[i])
-        return sum(sol)
+             sol += k[i]
+        return sol
             
               
         
