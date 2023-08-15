@@ -8,9 +8,6 @@ class Solution:
                 return [sol[k] , i+1]
             sol[numbers[i]] = i +1
 
-
-
-
 # Two Pointer
         s, t  = 0, len(numbers)-1
         while s < t:
