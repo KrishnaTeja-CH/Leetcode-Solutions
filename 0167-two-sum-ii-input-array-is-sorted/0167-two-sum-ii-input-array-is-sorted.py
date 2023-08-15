@@ -4,5 +4,5 @@ class Solution:
         for i in range(len(numbers)):
             k = target - numbers[i]
             if k in hashmap:
-                return [hashmap[k]+1, i+1]
-            hashmap[numbers[i]] = i
+                return [hashmap[k], i+1]
+            hashmap[numbers[i]] = i+1
