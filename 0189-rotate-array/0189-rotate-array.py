@@ -5,6 +5,4 @@ class Solution:
         """
         k %= len(nums)
         nums[k:], nums[:k] = nums[:-k], nums[-k:]
-   
-    
             
