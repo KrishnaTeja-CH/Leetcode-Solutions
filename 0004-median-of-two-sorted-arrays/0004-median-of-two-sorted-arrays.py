@@ -4,7 +4,8 @@ class Solution:
         nums.sort()
         x = len(nums)
         i = x//2
-        if x%2 == 0:
-            return (nums[i] + nums[i-1])/2
+        if x%2 == 0: 
+            return (nums[i] + nums[i-1])/ 2
+            
         else:
             return nums[i]
