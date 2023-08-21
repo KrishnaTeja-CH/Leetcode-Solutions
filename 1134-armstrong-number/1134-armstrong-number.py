@@ -4,5 +4,4 @@ class Solution:
         sol = 0
         for i in res:
             sol += i**len(res)
-            print(sol)
         return sol == n
