@@ -4,5 +4,5 @@ class Solution:
         for i in range(len(nums)):
             k = target - nums[i]
             if k in sol:
-                return [i, sol[k]]
+                return [sol[k], i]
             sol[nums[i]] = i
