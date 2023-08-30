@@ -4,4 +4,4 @@ class Solution:
         for i in range(pos, -1, -1):
             if i + nums[i] >= pos:
                 pos = i
-        return True if pos == 0 else False
+        return pos == 0 
