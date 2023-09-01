@@ -6,4 +6,3 @@ class Solution:
                 del nums[i]
             else:
                 i += 1
-        return len(nums)
