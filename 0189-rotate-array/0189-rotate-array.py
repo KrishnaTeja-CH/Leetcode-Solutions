@@ -4,9 +4,5 @@ class Solution:
         Do not return anything, modify nums in-place instead.
         """
         k %= len(nums)
-        print(nums[k:])
-        print(nums[:k])
-        print(nums[-k:])
-        print(nums[:-k])
         nums[k:], nums[:k] = nums[:-k], nums[-k:]      
      
