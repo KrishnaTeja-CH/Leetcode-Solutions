@@ -10,12 +10,4 @@ class Solution:
                 r -= 1
             else:
                 l += 1
-    #Hashmap
-        '''
-        sol = {}
-        for i in range(len(nums)):
-            k = target - nums[i]
-            if k in sol:
-                return [sol[k]+1, i+1]
-            sol[nums[i]] = i
-        '''            
+         
