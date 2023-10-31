@@ -1,9 +1,9 @@
 class Solution:
     def summaryRanges(self, nums: List[int]) -> List[str]:
-        i,j,k = 0, len(nums), []
-        while i < j:
+        i,k = 0,[]
+        while i < len(nums):
             res = nums[i]
-            while i+1 < j and nums[i]+1 == nums[i+1]:
+            while i+1 < len(nums) and nums[i]+1 == nums[i+1]:
                 i += 1
             if res != nums[i]:
                 k.append(str(res)+"->"+str(nums[i]))
