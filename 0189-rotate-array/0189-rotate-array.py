@@ -5,8 +5,7 @@ class Solution:
         """
         k %= len(nums)
         nums.reverse()
-        nums[:k] = reversed(nums[:k])
-        nums[k:] = reversed(nums[k:])
+        nums[:k], nums[k:]= reversed(nums[:k]), reversed(nums[k:])
         
         
         
