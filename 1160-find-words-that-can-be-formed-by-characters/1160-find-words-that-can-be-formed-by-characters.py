@@ -1,17 +1,12 @@
 class Solution:
     def countCharacters(self, words: List[str], chars: str) -> int:
-        res = 0
-        count = Counter(chars)
-        for w in words:
-            current = defaultdict(int)
-            good = True
-            for c in w:
-                current[c] += 1
-                if c not in count or current[c] > count[c]:
-                    good = False
+        result = []
+        for i in words:
+            for j in i:
+                if chars.count(j) < i.count(j):
                     break
-            if good:
-                res += len(w)
-        return res
+            else:
+                result.append(len(i)) 
+        return sum(result)
                 
         
