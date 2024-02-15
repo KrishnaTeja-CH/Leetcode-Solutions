@@ -3,37 +3,29 @@ class Solution:
         
         pre = defaultdict(list)
         
-        for course, p in prerequisites:
+        for course, p in prerequisites: 
             pre[course].append(p)
-    
-        taken = set()               # We are taking set to see there is no circle                 
         
-        def dfs(course):            # Create A dfs with the course, and add courses.
-            
-            if not pre[course]:     # If pre req of that course is empty we can complete the course.
+        taken = set()
+        
+        def dfs(course):
+            if not pre[course]:
                 return True
-            
-            if course in taken:     # if course already taken, doesnt work
+            if course in taken:
                 return False
-                
-            taken.add(course)       # Add courses, that are not taken     
+            taken.add(course)
             
-           
-            for p in pre[course]:   # Now check each pre-requsisite of that course
+            for p in pre[course]:
                 if not dfs(p):
                     return False
-                
-                                    # If all cases are satisfied, upodate the list
-            
-            pre[course] = []        # Now we can complete this course, and this is dfs
+            pre[course] = []
             return True
-                                    # Now we are calling the dfs from outside
-            
+ 
+
         for course in range(numCourses):
             if not dfs(course):
-                return False        # We are calling dfs to confirm, there is no circle
-        
-        return True                 # If everything qualifies, return True
+                return False
+        return True
         
         
         
