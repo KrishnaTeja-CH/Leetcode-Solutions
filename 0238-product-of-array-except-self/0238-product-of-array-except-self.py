@@ -5,7 +5,8 @@ class Solution:
         sol = [1] * n  
         for i in range(n):
             sol[i] = pre
-            pre *= nums[i]      
+            pre *= nums[i]  
+        print(sol)
         for i in range(n-1,-1,-1):
             sol[i] *= post
             post *= nums[i]
