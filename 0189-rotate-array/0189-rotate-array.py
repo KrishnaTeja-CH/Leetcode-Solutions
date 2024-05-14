@@ -12,7 +12,3 @@ class Solution:
         # nums[:] = nums[-k:] + nums[:-k]
 #Approach -3 
        # nums[k:] , nums[:k] = nums[:-k], nums[-k:]
-        
-        
-
-     
