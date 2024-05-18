@@ -17,4 +17,3 @@ class Solution:
 
         invert(root)    
         return root
-        
