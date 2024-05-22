@@ -4,5 +4,4 @@ class Solution:
         for i in nums:
             x ^= i
         return x
-    
-            
+        
