@@ -6,4 +6,4 @@ class Solution:
         if x%2 == 0: 
             return (nums[i] + nums[i-1])/ 2
         else:
-            return nums[i]
+            return nums[i]   
