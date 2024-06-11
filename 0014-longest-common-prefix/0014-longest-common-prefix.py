@@ -4,6 +4,5 @@ class Solution:
         for i in strs:
             while not i.startswith(start):
                 start = start[:-1]
-                print(start)
         return start
         
