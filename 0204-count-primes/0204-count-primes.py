@@ -4,13 +4,10 @@ class Solution:
         primes = [1]*n
         primes[0] = primes[1] = 0
         i = 2
-        while i<n:
-            tmp = i
+        while i*i<n:
             if primes[i]:
-                tmp += i
-                while tmp < n:
-                    primes[tmp] = 0
-                    tmp += i
+                for j in range(i*i, n, i):
+                    primes[j] = 0
             i+=1
         return sum(primes)
     
