@@ -3,7 +3,7 @@ class Solution:
 
         if len(intervals)< 2: return intervals
         intervals.sort()
-        
+       
         res = [intervals[0]]
         for i, j in intervals:
             if i > res[-1][1]:
