@@ -4,7 +4,7 @@ class Solution:
         #Memoization
         if n < 2: return n 
         prev1, prev2 = 1, 0
-        for _ in range(2,n+1):
+        for i in range(2,n+1):
             prev1, prev2 = prev1 + prev2, prev1 
         return prev1
         
