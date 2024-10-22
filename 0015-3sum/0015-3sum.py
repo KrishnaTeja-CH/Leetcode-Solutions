@@ -12,5 +12,5 @@ class Solution:
                     sol.add((nums[i], nums[j], nums[k]))
                     j += 1
                     k -= 1
-        return sol
+        return list(sol)
   
