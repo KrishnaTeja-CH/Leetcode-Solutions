@@ -1,9 +1,3 @@
 class Solution:
     def isIsomorphic(self, s: str, t: str) -> bool:
-        sol, res =[], []
-        for i in s:
-            sol.append(s.index(i))
-        for j in t:
-            res.append(t.index(j))
-        print(sol, res)
-        return sol == res    
+        return list(map(s.index, s)) == list(map(t.index, t))  
