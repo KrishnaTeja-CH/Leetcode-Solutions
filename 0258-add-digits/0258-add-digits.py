@@ -7,4 +7,4 @@ class Solution:
                 num = num // 10
             num = sol
         return num
-   
+        
