@@ -3,12 +3,26 @@ class Solution:
         """
         Do not return anything, modify nums in-place instead.
         """
-        i = 0 
-        j = len(nums)-1
-        while i<=j:
+        """ Sol-1 """
+        move = 0
+        for i in range(len(nums)):
+            if nums[i] != 0:
+                nums[move], nums[i] = nums[i], nums[move]
+                move += 1
+
+
+
+        
+        """ Sol-2
+        
+        move = 0
+        for i in range(len(nums)):
             if nums[i] == 0:
-                nums.append(nums.pop(i))
-                j -= 1
-            else:
-                i += 1
-            
+                move += 1
+            elif move > 0:
+                temp = nums[i]
+                nums[i] = 0
+                nums[i-move] = temp
+                
+        """
+        
